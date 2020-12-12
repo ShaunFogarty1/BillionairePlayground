@@ -6,6 +6,6 @@
 #Setup using xampp
 #step one:  download the repository into htdoc in xampp
 #step 2:  import the database to mysql
-#step there run the apache server with mysql
+#step tree  run the apache server with mysql
 #step 4:  open the it in the Web browser 
 s#ample url: http://localhost/Billionaire%20Playground/Website/
