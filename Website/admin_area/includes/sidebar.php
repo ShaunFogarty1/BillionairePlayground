@@ -22,7 +22,7 @@
             
         </button><!-- navbar-toggle finish -->
         
-        <a href="index.php?dashboard" class="navbar-brand">Admin Bid Area</a>
+        <a href="index.php?bid_dashboard" class="navbar-brand">Admin Bid Area</a>
         
     </div><!-- navbar-header finish -->
     
@@ -40,13 +40,13 @@
                 <li><!-- li begin -->
                     <a href="index.php?user_profile=<?php echo $admin_id; ?>""><!-- a href begin -->
                         
-                        <i class="fa fa-fw fa-user"></i> Profile
+                        <i class="fa fa-fw fa-user"></i> Admin Profile
                         
                     </a><!-- a href finish -->
                 </li><!-- li finish -->
                 
                 <li><!-- li begin -->
-                    <a href="index.php?view_products"><!-- a href begin -->
+                    <a href="index.php?view_bid_products"><!-- a href begin -->
                         
                         <i class="fa fa-fw fa-envelope"></i> Products Bid
                         
@@ -56,19 +56,19 @@
                 </li><!-- li finish -->
                 
                 <li><!-- li begin -->
-                    <a href="index.php?view_customers"><!-- a href begin -->
+                    <a href="index.php?view_bid_customers"><!-- a href begin -->
                         
-                        <i class="fa fa-fw fa-users"></i> Bid Customeres
+                        <i class="fa fa-fw fa-users"></i> Biders
                         
-                        <span class="badge"><?php echo $count_customers; ?></span>
+                        <span class="badge"><?php echo $count_biders; ?></span>
                         
                     </a><!-- a href finish -->
                 </li><!-- li finish -->
                 
                 <li><!-- li begin -->
-                    <a href="index.php?view_cats"><!-- a href begin -->
+                    <a href="index.php?view_bid_cats"><!-- a href begin -->
                         
-                        <i class="fa fa-fw fa-gear"></i> Product Categories
+                        <i class="fa fa-fw fa-gear"></i>Bid Product Categories
                         
                         <span class="badge"><?php echo $count_p_categories; ?></span>
                         
@@ -94,7 +94,7 @@
     <div class="collapse navbar-collapse navbar-ex1-collapse"><!-- collapse navbar-collapse navbar-ex1-collapse begin -->
         <ul class="nav navbar-nav side-nav"><!-- nav navbar-nav side-nav begin -->
             <li><!-- li begin -->
-                <a href="index.php?dashboard"><!-- a href begin -->
+                <a href="index.php?bid_dashboard"><!-- a href begin -->
                         
                         <i class="fa fa-fw fa-dashboard"></i> Bid Dashboard
                         
@@ -112,10 +112,10 @@
                 
                 <ul id="products" class="collapse"><!-- collapse begin -->
                     <li><!-- li begin -->
-                        <a href="index.php?insert_product"> Insert Bid Product </a>
+                        <a href="index.php?insert_bid_product"> Insert Bid Product </a>
                     </li><!-- li finish -->
                     <li><!-- li begin -->
-                        <a href="index.php?view_products"> View Bid Products </a>
+                        <a href="index.php?view_bid_products"> View Bid Products </a>
                     </li><!-- li finish -->
                 </ul><!-- collapse finish -->
                 
@@ -131,10 +131,10 @@
                 
                 <ul id="p_cat" class="collapse"><!-- collapse begin -->
                     <li><!-- li begin -->
-                        <a href="index.php?insert_p_cat"> Insert Bid Product Category </a>
+                        <a href="index.php?insert_bid_p_cat"> Insert Bid Product Category </a>
                     </li><!-- li finish -->
                     <li><!-- li begin -->
-                        <a href="index.php?view_p_cats"> View Bid Products Categories </a>
+                        <a href="index.php?view_bid_p_cats"> View Bid Products Categories </a>
                     </li><!-- li finish -->
                 </ul><!-- collapse finish -->
                 
@@ -150,10 +150,10 @@
                 
                 <ul id="cat" class="collapse"><!-- collapse begin -->
                     <li><!-- li begin -->
-                        <a href="index.php?insert_cat"> Insert Bid Category </a>
+                        <a href="index.php?insert_bid_cat"> Insert Bid Category </a>
                     </li><!-- li finish -->
                     <li><!-- li begin -->
-                        <a href="index.php?view_cats"> View Bid Categories </a>
+                        <a href="index.php?view_bid_cats"> View Bid Categories </a>
                     </li><!-- li finish -->
                 </ul><!-- collapse finish -->
                 
@@ -169,29 +169,29 @@
                 
                 <ul id="slides" class="collapse"><!-- collapse begin -->
                     <li><!-- li begin -->
-                        <a href="index.php?insert_slide"> Insert Slide </a>
+                        <a href="index.php?insert_bid_slide"> Insert Bid Slide </a>
                     </li><!-- li finish -->
                     <li><!-- li begin -->
-                        <a href="index.php?view_slides"> View Slides </a>
+                        <a href="index.php?view_bid_slides"> View Bid Slides </a>
                     </li><!-- li finish -->
                 </ul><!-- collapse finish -->
                 
             </li><!-- li finish -->
             
             <li><!-- li begin -->
-                <a href="index.php?view_customers"><!-- a href begin -->
-                    <i class="fa fa-fw fa-users"></i> View Bid Customers
+                <a href="index.php?view_bid_customers"><!-- a href begin -->
+                    <i class="fa fa-fw fa-users"></i> View Your Biders
                 </a><!-- a href finish -->
             </li><!-- li finish -->
             
             <li><!-- li begin -->
-                <a href="index.php?view_orders"><!-- a href begin -->
+                <a href="index.php?view_bid_orders"><!-- a href begin -->
                     <i class="fa fa-fw fa-book"></i> View Bid Orders
                 </a><!-- a href finish -->
             </li><!-- li finish -->
             
             <li><!-- li begin -->
-                <a href="index.php?view_payments"><!-- a href begin -->
+                <a href="index.php?view_bid_payments"><!-- a href begin -->
                     <i class="fa fa-fw fa-money"></i> View Bid Payments
                 </a><!-- a href finish -->
             </li><!-- li finish -->
@@ -206,10 +206,10 @@
                 
                 <ul id="users" class="collapse"><!-- collapse begin -->
                     <li><!-- li begin -->
-                        <a href="index.php?insert_user"> Insert Bid User </a>
+                        <a href="index.php?insert_bid_user"> Insert Bid User Or Admin</a>
                     </li><!-- li finish -->
                     <li><!-- li begin -->
-                        <a href="index.php?view_users"> View Bid Users </a>
+                        <a href="index.php?view_bid_users"> View Bid Users </a>
                     </li><!-- li finish -->
                     <li><!-- li begin -->
                         <a href="index.php?user_profile=<?php echo $admin_id; ?>"> Edit User Profile </a>
