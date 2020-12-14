@@ -42,9 +42,7 @@
 
                        <div class='box'><!-- box Begin -->
                            <h1>Bid Or Shop</h1>
-                           <p>
-                              The E406 is designed to help you be productive all day - even when you're on the move. This compact and lightweight 14-inch laptop is powered by the latest Intel processor and provides long-lasting battery life. And with a NanoEdge display for immersive viewing, it's the best laptop for people on the go.
-                           </p>
+                           <p>experience the finer things     </p>
                        </div><!-- box Finish -->
 
                        ";
