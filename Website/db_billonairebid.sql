@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.5
+-- version 5.0.3
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 16, 2020 at 02:05 PM
--- Server version: 10.1.38-MariaDB
--- PHP Version: 7.3.4
+-- Generation Time: Dec 14, 2020 at 12:34 PM
+-- Server version: 10.4.14-MariaDB
+-- PHP Version: 7.4.11
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -126,10 +125,10 @@ CREATE TABLE `bid_categories` (
 --
 
 INSERT INTO `bid_categories` (`bid_cat_id`, `bid_cat_title`, `bid_cat_desc`) VALUES
-(1, 'Electronics', 'laptops'),
-(2, 'Clothes', 'laptops'),
-(3, 'Plant Machinery', 'laptops'),
-(4, 'Books', 'laptops');
+(1, 'Japanese ', 'Made in Japan '),
+(2, 'Irish ', 'whiskey and spuds'),
+(3, 'Art', 'very fancy '),
+(4, 'Historic books ', 'Just old books ');
 
 -- --------------------------------------------------------
 
@@ -165,7 +164,7 @@ CREATE TABLE `bid_products` (
   `bid_product_id` int(10) NOT NULL,
   `bid_p_cat_id` int(10) NOT NULL,
   `bid_cat_id` int(10) NOT NULL,
-  `date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `date` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   `bid_product_title` text NOT NULL,
   `bid_product_img1` text NOT NULL,
   `bid_product_img2` text NOT NULL,
@@ -180,22 +179,22 @@ CREATE TABLE `bid_products` (
 --
 
 INSERT INTO `bid_products` (`bid_product_id`, `bid_p_cat_id`, `bid_cat_id`, `date`, `bid_product_title`, `bid_product_img1`, `bid_product_img2`, `bid_product_img3`, `bid_product_price`, `bid_product_keywords`, `bid_product_desc`) VALUES
-(1, 1, 2, '2020-11-14 11:40:33', 'Hp Dv 2000', 'laptop_hp_1E6T5EA.jpg', 'laptop_hp_1E6T5EA.jpg', 'laptop_hp_1E6T5EA.jpg', 66, 'Cheap To Bid', 'The E406 is designed to help you be productive all day - even when you\'re on the move. This compact and lightweight 14-inch laptop is powered by the latest Intel processor and provides long-lasting battery life. And with a NanoEdge display for immersive viewing, it\'s the best laptop for people on the go.'),
-(2, 4, 3, '2020-11-14 12:25:06', 'Biafra War ', '51sAIXwN9sL._SX331_BO1,204,203,200_.jpg', '51sAIXwN9sL._SX331_BO1,204,203,200_.jpg', '51sAIXwN9sL._SX331_BO1,204,203,200_.jpg', 121, 'Cheap To Bid', 'The E406 is designed to help you be productive all day - even when you\'re on the move. This compact and lightweight 14-inch laptop is powered by the latest Intel processor and provides long-lasting battery life. And with a NanoEdge display for immersive viewing, it\'s the best laptop for people on the go.'),
-(3, 5, 2, '2020-11-14 13:53:14', 'Girl Polos T-Shirt', 'laptop_hp_1E6T5EA.jpg', 'laptop_hp_1E6T5EA.jpg', 'laptop_hp_1E6T5EA.jpg', 55, 'Cheap To Bid', 'The E406 is designed to help you be productive all day - even when you\'re on the move. This compact and lightweight 14-inch laptop is powered by the latest Intel processor and provides long-lasting battery life. And with a NanoEdge display for immersive viewing, it\'s the best laptop for people on the go.'),
-(4, 1, 1, '2020-11-14 11:41:42', 'Lenovo 344NX', 'laptop_hp_1E6T5EA.jpg', 'laptop_hp_1E6T5EA.jpg', 'laptop_hp_1E6T5EA.jpg', 100, 'Cheap To Bid', 'The E406 is designed to help you be productive all day - even when you\'re on the move. This compact and lightweight 14-inch laptop is powered by the latest Intel processor and provides long-lasting battery life. And with a NanoEdge display for immersive viewing, it\'s the best laptop for people on the go.'),
-(5, 1, 2, '2020-11-14 11:58:13', 'Acer VBS-560', 'laptop_hp_1E6T5EA.jpg', 'laptop_hp_1E6T5EA.jpg', 'laptop_hp_1E6T5EA.jpg', 103, 'Cheap To Bid', 'The E406 is designed to help you be productive all day - even when you\'re on the move. This compact and lightweight 14-inch laptop is powered by the latest Intel processor and provides long-lasting battery life. And with a NanoEdge display for immersive viewing, it\'s the best laptop for people on the go.'),
-(6, 4, 2, '2020-11-14 12:21:07', 'Biafra Genocide', 'biafra_war1.jpg', 'biafra_war1.jpg', 'biafra_war1.jpg', 211, 'Cheap To Bid', 'The E406 is designed to help you be productive all day - even when you\'re on the move. This compact and lightweight 14-inch laptop is powered by the latest Intel processor and provides long-lasting battery life. And with a NanoEdge display for immersive viewing, it\'s the best laptop for people on the go.'),
-(7, 3, 2, '2020-11-14 12:06:39', 'High Heels Pantofel Brukat', 'printed-trousers-womens-537485_l.jpg', 'printed-trousers-womens-537485_l.jpg', 'printed-trousers-womens-537485_l.jpg', 45, 'Cheap To Bid', 'The E406 is designed to help you be productive all day - even when you\'re on the move. This compact and lightweight 14-inch laptop is powered by the latest Intel processor and provides long-lasting battery life. And with a NanoEdge display for immersive viewing, it\'s the best laptop for people on the go.'),
-(8, 3, 1, '2020-11-14 12:06:49', 'Dell S200 Vistro', 'laptop_hp_1E6T5EA.jpg', 'laptop_hp_1E6T5EA.jpg', 'laptop_hp_1E6T5EA.jpg', 51, 'Cheap To Bid', 'The E406 is designed to help you be productive all day - even when you\'re on the move. This compact and lightweight 14-inch laptop is powered by the latest Intel processor and provides long-lasting battery life. And with a NanoEdge display for immersive viewing, it\'s the best laptop for people on the go.'),
-(9, 2, 1, '2020-11-14 12:07:10', 'Smasung NP-5000', 'laptop_hp_1E6T5EA.jpg', 'laptop_hp_1E6T5EA.jpg', 'laptop_hp_1E6T5EA.jpg', 166, 'Cheap To Bid', 'The E406 is designed to help you be productive all day - even when you\'re on the move. This compact and lightweight 14-inch laptop is powered by the latest Intel processor and provides long-lasting battery life. And with a NanoEdge display for immersive viewing, it\'s the best laptop for people on the go.'),
-(10, 2, 2, '2020-11-14 12:07:22', 'Diamond Heart Ring', 'printed-trousers-womens-537485_l.jpg', 'printed-trousers-womens-537485_l.jpg', 'printed-trousers-womens-537485_l.jpg', 300, 'Cheap To Bid', '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur cupiditate animi, voluptas neque quasi qui unde fuga porro vero magnam maiores optio amet quos temporibus? Amet saepe fugit nostrum a?</p>The E406 is designed to help you be productive all day - even when you\'re on the move. This compact and lightweight 14-inch laptop is powered by the latest Intel processor and provides long-lasting battery life. And with a NanoEdge display for immersive viewing, it\'s the best laptop for people on the go.'),
-(11, 5, 1, '2020-11-14 12:07:34', 'Dell Inspiron X900', 'laptop_hp_1E6T5EA.jpg', 'laptop_hp_1E6T5EA.jpg', 'laptop_hp_1E6T5EA.jpg', 50, 'Cheap To Bid', 'The E406 is designed to help you be productive all day - even when you\'re on the move. This compact and lightweight 14-inch laptop is powered by the latest Intel processor and provides long-lasting battery life. And with a NanoEdge display for immersive viewing, it\'s the best laptop for people on the go.'),
-(12, 5, 1, '2020-11-14 12:07:53', 'HP Envy 1000', 'laptop_hp_1E6T5EA.jpg', 'laptop_hp_1E6T5EA.jpg', 'laptop_hp_1E6T5EA.jpg', 45, 'Cheap To Bid', 'The E406 is designed to help you be productive all day - even when you\'re on the move. This compact and lightweight 14-inch laptop is powered by the latest Intel processor and provides long-lasting battery life. And with a NanoEdge display for immersive viewing, it\'s the best laptop for people on the go.'),
-(13, 5, 1, '2020-11-14 12:08:06', 'MacBook Pro A1214', 'laptop_hp_1E6T5EA.jpg', 'laptop_hp_1E6T5EA.jpg', 'laptop_hp_1E6T5EA.jpg', 40, 'Cheap To Bid', 'The E406 is designed to help you be productive all day - even when you\'re on the move. This compact and lightweight 14-inch laptop is powered by the latest Intel processor and provides long-lasting battery life. And with a NanoEdge display for immersive viewing, it\'s the best laptop for people on the go.'),
+(1, 1, 2, '2020-12-14 10:38:36', 'Middleton very rare 2€0€20', 'Midleton-Very-Rare_Vintage-Release_2020_3-1-980x1070.jpg', 'Midleton-Very-Rare_Vintage-Release_2020_3-1-980x1070.jpg', 'Midleton-Very-Rare_Vintage-Release_2020_3-1-980x1070.jpg', 1231, 'Whiskey ', 'very good '),
+(2, 4, 4, '2020-12-14 10:33:44', 'Biafra War ', '51sAIXwN9sL._SX331_BO1,204,203,200_.jpg', '51sAIXwN9sL._SX331_BO1,204,203,200_.jpg', '51sAIXwN9sL._SX331_BO1,204,203,200_.jpg', 121, 'Cheap To Bid', 'The E406 is designed to help you be productive all day - even when you\'re on the move. This compact and lightweight 14-inch laptop is powered by the latest Intel processor and provides long-lasting battery life. And with a NanoEdge display for immersive viewing, it\'s the best laptop for people on the go.'),
+(3, 5, 2, '2020-12-14 10:42:27', 'Potatoes ', 'potatoes.jpg', 'potatoes.jpg', 'potatoes.jpg', 55, 'potatoes ', 'boil em mash em stick em in a stew potatoes '),
+(4, 1, 1, '2020-12-14 10:32:45', 'Haraujuku experience', 'harajuku.jpg', 'harajuku1.jpg', 'harajuku2.jpg', 100, 'sugoi kawaii', 'Get the latest look'),
+(5, 4, 4, '2020-12-14 10:45:30', 'The bloody field ', '9781788491969.jpg', '9781788491969.jpg', '9781788491969.jpg', 103, 'Cheap To Bid', 'The E406 is designed to help you be productive all day - even when you\'re on the move. This compact and lightweight 14-inch laptop is powered by the latest Intel processor and provides long-lasting battery life. And with a NanoEdge display for immersive viewing, it\'s the best laptop for people on the go.'),
+(6, 4, 4, '2020-12-14 10:43:11', 'Biafra Genocide', 'biafra_war1.jpg', 'biafra_war1.jpg', 'biafra_war1.jpg', 211, 'Cheap To Bid', 'The E406 is designed to help you be productive all day - even when you\'re on the move. This compact and lightweight 14-inch laptop is powered by the latest Intel processor and provides long-lasting battery life. And with a NanoEdge display for immersive viewing, it\'s the best laptop for people on the go.'),
+(7, 31, 1, '2020-12-14 11:29:18', 'Babymetal', 'babymetal.jpg', 'babymetal1.jpg', 'babymetal2.jpg', 45, 'kawaii', 'sugoii'),
+(8, 1, 1, '2020-12-14 11:29:39', 'Babymetal experience ', 'BabymealVip.jpg', 'BabymealVip1.jpg', 'BabymealVip2.jpg', 51, 'Ultimate fox good experience ', 'Ultimate fox good experience '),
+(9, 2, 1, '2020-12-14 11:06:30', 'Samurai shoes', 'KEGUTSU (1).jpeg', 'KEGUTSU (1).jpeg', 'KEGUTSU (1).jpeg', 166, 'KEGUTSU (1).jpeg', 'wore by a Samurai '),
+(10, 51, 3, '2020-12-14 11:21:30', 'Cabinet ', 'Cabinet.jpg', 'Cabinet1.jpg', 'Cabinet2.jpg', 300, 'fancy ', 'Old German press '),
+(11, 5, 1, '2020-12-14 11:25:38', 'Imperial Geisha ', 'Geisha.jpg', 'Geisha2.jpg', 'Geisha1.jpg', 50, 'Geisha.jpg', 'Imperial Geisha to host your event '),
+(12, 5, 1, '2020-12-14 11:27:55', 'Sadako', 'sadako.jpg', 'sadako1.jpg', 'sadako2.jpg', 45, 'scary ', 'kuiro'),
+(13, 3, 11, '2020-12-14 11:31:48', 'Barney the dinosaur ', 'download.jpeg', 'download.jpeg', 'download.jpeg', 40, 'Cheap To Bid', 'The E406 is designed to help you be productive all day - even when you\'re on the move. This compact and lightweight 14-inch laptop is powered by the latest Intel processor and provides long-lasting battery life. And with a NanoEdge display for immersive viewing, it\'s the best laptop for people on the go.'),
 (14, 1, 1, '2020-11-14 12:08:22', 'Toshia DEL-7000', 'laptop_hp_1E6T5EA.jpg', 'laptop_hp_1E6T5EA.jpg', 'laptop_hp_1E6T5EA.jpg', 98, 'Cheap To Bid', 'The E406 is designed to help you be productive all day - even when you\'re on the move. This compact and lightweight 14-inch laptop is powered by the latest Intel processor and provides long-lasting battery life. And with a NanoEdge display for immersive viewing, it\'s the best laptop for people on the go.'),
 (15, 1, 1, '2020-11-14 12:08:33', 'MacBook Pro DA2020', 'laptop_hp_1E6T5EA.jpg', 'laptop_hp_1E6T5EA.jpg', 'laptop_hp_1E6T5EA.jpg', 90, 'Cheap To Bid', 'The E406 is designed to help you be productive all day - even when you\'re on the move. This compact and lightweight 14-inch laptop is powered by the latest Intel processor and provides long-lasting battery life. And with a NanoEdge display for immersive viewing, it\'s the best laptop for people on the go.'),
-(16, 1, 2, '2020-11-14 12:09:04', 'Acer PPN-2020', 'laptop_hp_1E6T5EA.jpg', 'laptop_hp_1E6T5EA.jpg', 'laptop_hp_1E6T5EA.jpg', 99, 'Cheap To Bid', 'The E406 is designed to help you be productive all day - even when you\'re on the move. This compact and lightweight 14-inch laptop is powered by the latest Intel processor and provides long-lasting battery life. And with a NanoEdge display for immersive viewing, it\'s the best laptop for people on the go.');
+(16, 1, 1, '2020-12-14 11:33:30', 'Acer PPN-2020', 'laptop_hp_1E6T5EA.jpg', 'laptop_hp_1E6T5EA.jpg', 'laptop_hp_1E6T5EA.jpg', 99, 'Cheap To Bid', 'The E406 is designed to help you be productive all day - even when you\'re on the move. This compact and lightweight 14-inch laptop is powered by the latest Intel processor and provides long-lasting battery life. And with a NanoEdge display for immersive viewing, it\'s the best laptop for people on the go.');
 
 -- --------------------------------------------------------
 
@@ -214,11 +213,11 @@ CREATE TABLE `bid_product_categories` (
 --
 
 INSERT INTO `bid_product_categories` (`bid_p_cat_id`, `bid_p_cat_title`, `bid_p_cat_desc`) VALUES
-(1, 'Laptops', 'laptops'),
-(2, 'Shoes', 'laptops'),
-(3, 'Trailers', 'laptops'),
-(4, 'Histroy Books', 'laptops'),
-(5, 'T-Shirt', 'laptops');
+(1, 'They have those ', 'I don\'t believe it'),
+(2, 'shoes', 'For your feet '),
+(3, 'Dinosaur bones ', 'very cool '),
+(4, 'Histroy Books', 'just old books '),
+(5, 'money ', 'to tight to mention ');
 
 -- --------------------------------------------------------
 
@@ -238,9 +237,9 @@ CREATE TABLE `bid_slider` (
 
 INSERT INTO `bid_slider` (`bid_slide_id`, `bid_slide_name`, `bid_slide_image`) VALUES
 (1, 'slide-13', 'slide-13.jpg'),
-(2, 'slide-13', 'slide-13.jpg'),
-(3, 'slide-13', 'slide-13.jpg'),
-(4, 'slide-13', 'slide-13.jpg');
+(2, 'slide-13', 'slide-2.jpg'),
+(3, 'slide-13', 'slide-3.jpg'),
+(4, 'slide-13', 'slide-4.jpg');
 
 -- --------------------------------------------------------
 
